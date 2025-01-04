@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  form#meal(name="meal" action="/" method="POST")
+    h1
+      span.rice 🍚
+      span おすすめの
+      select(name="type" onChange="change()")
+        each val, key in typeOfMeal
+          option(value=key selected=(key === type)) !{val}
+  div#text
+    p !{text}
+
+  script
+    | const change = function () {
+    |  document.getElementById('text').innerText = 'loading...';
+    |  document.forms["meal"].submit();
+    | };

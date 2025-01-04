@@ -1,0 +1,68 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,a,
+del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,
+hgroup,menu,nav,section,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+}
+img {
+  line-height: 0;
+  vertical-align: bottom;
+  width: 100%;
+}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+blockquote, q {
+  quotes: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* css */
+body {
+  padding: 20px;
+  color: #645855;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #eddfdc;
+}
+h1 {
+  font-size: 22px;
+}
+h1 .rice {
+  display: inline-block;
+  transform: translateY(-3px);
+  margin-right: 2px;
+}
+select {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  transform: translateX(-1px);
+  outline: 0;
+}
+option {
+  font-size: 16px;
+}
+#text {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+strong {
+  color: #a7604e;
+}
