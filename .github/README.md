@@ -1,13 +1,12 @@
-# ごはん提案アプリ（chat-GPT）
-https://github.com/apricotn18/meal-app.git
+# OpenAIを使ったごはん提案アプリ
+https://meal-app-jet.vercel.app/
 ```
 npm i
 npm start
 ```
 
 ### TODO
-- favicon設定
-- chat-GPTのレスポンスが遅くてタイムアウトになる
+- APIのレスポンスが遅くてタイムアウトになる（10秒以上）
 
 ### API key
 1. https://platform.openai.com/account/api-keys
