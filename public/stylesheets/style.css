@@ -1,5 +1,5 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,a,
-del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,li,fieldset,form,label,legend,
+del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ul,ol,li,fieldset,form,label,legend,
 table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,
 hgroup,menu,nav,section,time,mark,audio,video {
   margin: 0;
@@ -8,7 +8,7 @@ hgroup,menu,nav,section,time,mark,audio,video {
   outline: 0;
   vertical-align: baseline;
   background: transparent;
-  font-family: 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+  font-family: "M PLUS Rounded 1c", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
 }
 img {
   line-height: 0;
@@ -33,18 +33,15 @@ a {
 /* css */
 body {
   padding: 20px;
-  color: #645855;
+  color: #715551;
   font-size: 16px;
   line-height: 1.4;
-  background-color: #eddfdc;
+  background-color: #fdf3d6;
 }
 h1 {
   font-size: 22px;
-}
-h1 .rice {
-  display: inline-block;
-  transform: translateY(-3px);
-  margin-right: 2px;
+  display: flex;
+  align-items: center;
 }
 select {
   font: inherit;
@@ -64,5 +61,8 @@ option {
   border-radius: 10px;
 }
 strong {
-  color: #a7604e;
+  color: #b76d63;
+}
+ul, ol {
+  padding-left: 30px;
 }
