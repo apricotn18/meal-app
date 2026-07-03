@@ -7,8 +7,10 @@ block content
       select(name="type" onChange="change()")
         each val, key in typeOfMeal
           option(value=key selected=(key === type)) !{val}
-  div#text
-    p !{text}
+  div
+    div#text
+      p !{text}
+    img(src="/image/cat.png" alt="Recommended Meal")
 
   script
     | const change = function () {
