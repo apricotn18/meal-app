@@ -13,10 +13,12 @@ var defaultType = 'breakfast';
 // dotenv
 dotenv.config();
 
-// openai
+// groq (openai互換API)
 var openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: process.env.GROQ_TOKEN,
+  baseURL: 'https://api.groq.com/openai/v1',
 });
+var SYSTEM_PROMPT = process.env.SYSTEM_PROMPT;
 
 function resolveType(rawType) {
   return typeOfMeal[rawType] ? rawType : defaultType;
@@ -24,15 +26,17 @@ function resolveType(rawType) {
 
 async function renderMealRecommendation(req, res, type) {
   try {
-    var result = await openai.responses.create({
-      model: 'gpt-5.4-mini',
-      store: true,
-      input: 'おすすめの' + typeOfMeal[type] + 'を1つ',
+    var result = await openai.chat.completions.create({
+      model: 'openai/gpt-oss-120b',
+      messages: [
+        ...(SYSTEM_PROMPT ? [{ role: 'system', content: SYSTEM_PROMPT }] : []),
+        { role: 'user', content: 'おすすめの' + typeOfMeal[type] + 'を1つ' },
+      ],
     });
     res.render('index', {
       typeOfMeal,
       type,
-      text: markdown.render(result.output_text),
+      text: markdown.render(result.choices[0]?.message.content ?? ''),
     });
   } catch (err) {
     console.error(err);
