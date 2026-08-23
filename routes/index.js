@@ -11,7 +11,7 @@ var typeOfMeal = {
 var defaultType = 'breakfast';
 
 // dotenv
-dotenv.config();
+dotenv.config({ path: '.env.local' });
 
 // groq (openai互換API)
 var openai = new OpenAI({
